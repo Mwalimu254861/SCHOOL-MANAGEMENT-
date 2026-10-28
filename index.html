@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#163b68">
+<title>School Management Portal</title><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="loginView" class="login-shell">
+  <div class="login-art"><div class="brand-mark">S</div><p class="eyebrow">SCHOOL MANAGEMENT SYSTEM</p><h1>One school.<br>One connected platform.</h1><p>Manage learning, records, results and school operations from one secure workspace.</p><div class="login-points"><span>✓ Academic records</span><span>✓ Automatic report books</span><span>✓ Admin-controlled access</span></div></div>
+  <div class="login-panel"><div class="mobile-brand"><div class="brand-mark">S</div><strong id="loginSchoolName">School Portal</strong></div><div class="login-card"><p class="eyebrow">WELCOME BACK</p><h2>Sign in to your portal</h2><p class="muted">Use the login ID provided by your school administrator.</p><form id="loginForm"><label>Login ID<input id="loginId" autocomplete="username" placeholder="Admin email or admission number" required></label><label>Password<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required></label><button class="btn primary full" type="submit">Sign in <span>→</span></button><p id="loginError" class="error" role="alert"></p></form><div class="login-help"><strong>Student account not recognised?</strong><p>If your admission number is not registered, contact the administrator at 0716152290 or nyakundi1759@yahoo.com.</p></div></div><p class="tiny muted">Secure access · Role-based permissions</p></div>
+</div>
+<div id="appView" class="app hidden">
+  <aside class="sidebar" id="sidebar"><div class="side-brand"><div class="brand-mark">S</div><div><strong id="sideSchoolName">School Portal</strong><small>MANAGEMENT SYSTEM</small></div></div><div class="side-school" id="sideSchoolMotto">Your school, connected</div><nav id="navigation"></nav><div class="side-bottom"><button class="nav-link" data-action="settings"><span class="nav-icon">⚙</span> Settings</button><button class="nav-link" id="logoutBtn"><span class="nav-icon">↪</span> Sign out</button><div class="side-version">School Portal · v1.0</div></div></aside>
+  <main class="main"><header class="topbar"><button id="menuBtn" class="icon-btn mobile-only" aria-label="Open menu">☰</button><div><div class="crumb" id="crumb">OVERVIEW</div><h1 id="pageTitle">Dashboard</h1></div><div class="top-actions"><button id="installBtn" class="btn soft small hidden">Install app</button><a class="btn outline small" id="apkBtn" href="/downloads/school-portal.apk" download>↓ Download APK</a><div class="user-chip"><div class="avatar" id="avatar">A</div><div><strong id="userName">Administrator</strong><small id="userRole">ADMIN</small></div></div></div></header>
+  <section id="changePasswordNotice" class="notice warning hidden"><div><strong>Secure your account</strong><p>Your account requires a new password before continuing.</p></div><button class="btn primary small" data-action="password">Change password</button></section>
+  <section id="pageContent" class="page-content"></section>
+  <footer class="footer"><span>© <span id="year"></span> <span id="footerSchoolName">School Portal</span></span><span>School operations, organised.</span></footer></main>
+</div>
+<div id="modalRoot"></div><div id="toastRoot" class="toast-root" aria-live="polite"></div>
+<script src="/config.js"></script><script src="/app.js"></script>
+</body></html>
